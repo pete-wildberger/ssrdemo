@@ -1,0 +1,40 @@
+{
+  "name": "ssrdemo",
+  "version": "1.0.0",
+  "main": "dist/server.js",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "compression": "^1.7.3",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.3",
+    "helmet": "^3.14.0",
+    "lodash.template": "^4.5.0",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "react-router-dom": "^5.1.2"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.17.0",
+    "@types/compression": "^0.0.36",
+    "@types/express": "^4.11.1",
+    "@types/helmet": "^0.0.42",
+    "@types/lodash.template": "^4.4.6",
+    "@types/node": "^9.6.8",
+    "@types/react": "^16.13.0",
+    "@types/react-dom": "^16.13.0",
+    "@types/react-router-dom": "^5.1.2",
+    "awesome-typescript-loader": "^5.2.1",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^4.0.1",
+    "gulp-sequence": "^1.0.0",
+    "gulp-typescript": "^4.0.2",
+    "html-webpack-plugin": "^3.2.0",
+    "minimist": "^1.2.0",
+    "typescript": "^2.8.3",
+    "webpack": "^4.25.1",
+    "webpack-bundle-analyzer": "^3.0.3",
+    "webpack-cli": "^3.1.2"
+  }
+}

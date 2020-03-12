@@ -1,0 +1,85 @@
+@import 'globals';
+
+.login {
+	padding: 40% 20%;
+	box-shadow: 5px 10px #888888;
+	border-radius: 1%;
+	background-color: #fff;
+	input {
+		margin: 1%;
+		width: 98%;
+		display: block;
+	}
+	.btn {
+		margin: 1%;
+		width: 98%;
+		background-color: #fff;
+		color: $black;
+		border: 2px solid $black;
+	}
+}
+
+.vert {
+	align-items: center;
+}
+.view {
+	background-image: url('../img/cedar.jpg');
+	height: 90%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-color: #fff;
+}
+// header styles
+.head {
+	background-color: $black;
+	padding: 1%;
+	display: flex;
+	justify-content: space-between;
+}
+.logo {
+	width: 20%;
+	display: block;
+}
+.logout-cont {
+	width: 10%;
+	color: dodgerblue;
+}
+// footer styles
+.foot {
+	width: 100%;
+	background-color: $black;
+	padding: 64px 32px;
+	text-align: center;
+}
+.site-address {
+	display: block;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	margin: auto;
+	color: #fff;
+}
+.social {
+	padding: 1%;
+	background-color: $yellow;
+}
+.social-container {
+	display: flex;
+	justify-content: center;
+}
+.social-icon {
+	width: 20%;
+	display: block;
+	margin: auto;
+}
+.dash {
+	background-color: silver;
+	.flex-table-cont {
+		display: flex;
+		justify-content: space-between;
+	}
+	.flex-table-d {
+		padding: 1%;
+		text-align: center;
+	}
+}
