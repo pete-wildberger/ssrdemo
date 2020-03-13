@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = [
   {
@@ -53,6 +54,7 @@ module.exports = [
       ]
     },
     plugins: [
+      new UglifyJSPlugin()
       // new BundleAnalyzerPlugin(),
       //   new HtmlWebpackPlugin({
       //     template: './src/client/index.html',

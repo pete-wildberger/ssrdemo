@@ -5,7 +5,6 @@ const tsProject = ts.createProject('tsconfig.json');
 const seq = require('gulp-sequence');
 const del = require('del');
 const { exec } = require('child_process');
-const minimist = require('minimist');
 
 gulp.task('clean', done => {
   del.sync(['dist/*']);
