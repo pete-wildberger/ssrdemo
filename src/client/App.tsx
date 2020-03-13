@@ -16,9 +16,13 @@ export class App extends React.Component {
   };
 
   async componentDidMount() {
-    const { data } = await axios.get('https://randomuser.me/api/?results=12');
-    const users = data.results;
-    this.setState({ users, loaded: true });
+    try {
+      const { data } = await axios.get('https://randomuser.me/api/?results=12');
+      const users = data.results;
+      this.setState({ users, loaded: true });
+    } catch (e) {
+      console.log(e);
+    }
   }
 
   render() {
