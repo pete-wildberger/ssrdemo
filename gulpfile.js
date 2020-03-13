@@ -55,36 +55,3 @@ gulp.task('build:dev', seq(['clean', 'sass', 'dist:assets:img', 'html', 'server'
 gulp.task('sass:watch', () => {
   gulp.watch('src/client/assets/sass/*.scss', ['sass']);
 });
-
-gulp.task('deploy', done => {
-  const opts = { cwd: 'dist/' };
-  const aliases = {
-    dev: 'dev',
-    prod: 'prod'
-  };
-
-  const options = minimist(process.argv.slice(2), { string: 'remote' });
-  if (!aliases[options.remote]) {
-    return done(new Error('Invalid remote provided. Must be one of [' + Object.keys(aliases).join(', ') + '].'));
-  }
-  exec('git init', opts, (err, stdout, stderr) => {
-    console.log(stdout);
-    exec('git add .', opts, (err, stdout, stderr) => {
-      exec(
-        'git commit --allow-empty -m "Deploying to ' + aliases[options.remote] + '..."',
-        opts,
-        (err, stdout, stderr) => {
-          console.log(stdout);
-          const add_remote = 'git remote add -f ' + aliases[options.remote] + ' ' + aliases[options.remote];
-          exec(add_remote, opts, (err, stdout, stderr) => {
-            exec('git push --force ' + aliases[options.remote] + ' master', opts, (err, stdout, stderr) => {
-              console.log(stdout);
-              console.log(stderr);
-              done(err);
-            });
-          });
-        }
-      );
-    });
-  });
-});
