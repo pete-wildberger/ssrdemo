@@ -20,6 +20,7 @@ export class App extends React.Component {
     const users = data.results;
     this.setState({ users, loaded: true });
   }
+
   render() {
     return (
       <Switch>
@@ -27,7 +28,7 @@ export class App extends React.Component {
         <Route
           path="/details/:id"
           component={(props: { match }) => {
-            const selectedUser = this.state.users.find(user => props.match.params.id === user.id.value);
+            const selectedUser = this.state.users.find(user => props.match.params.id === user.login.uuid);
             return <UserDetail {...selectedUser} />;
           }}
         />

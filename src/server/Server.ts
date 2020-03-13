@@ -26,6 +26,7 @@ class Server {
     this.routes();
     this.listen();
   }
+
   middleware() {
     this.express.use(compression());
     this.express.use(helmet());
