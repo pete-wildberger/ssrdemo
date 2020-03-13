@@ -14,12 +14,14 @@ class Server {
   private PORT: string;
   private template: any;
   private express = express();
+
   constructor(port: string) {
     const filePath = path.resolve(__dirname, '../client/index.html');
-    console.log(filePath);
     const baseTemplate = fs.readFileSync(filePath);
+
     this.template = template(baseTemplate);
     this.PORT = port;
+
     this.middleware();
     this.routes();
     this.listen();
@@ -32,7 +34,6 @@ class Server {
 
   routes() {
     this.express.use((req: Request, res: Response) => {
-      console.log('hit', req.url);
       const context: { [key: string]: any; url?: string } = {};
       const body: string = ReactDOMServer.renderToString(
         React.createElement(StaticRouter, { location: req.url, context }, React.createElement(App))
@@ -41,7 +42,7 @@ class Server {
       if (context.url) {
         res.redirect(context.url);
       }
-      console.log(body);
+
       res.send(this.template({ body }));
     });
   }
