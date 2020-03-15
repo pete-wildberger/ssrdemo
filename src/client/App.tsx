@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import { Landing } from './Landing';
-import { UserDetail } from './UserDetail';
+import { Landing } from './components/Landing';
+import { UserDetail } from './components/UserDetail';
 const { results } = require('../../users.json');
 
 function FourOhFour(): JSX.Element {

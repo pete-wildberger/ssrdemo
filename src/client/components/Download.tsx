@@ -1,5 +1,5 @@
 import * as React from 'react';
-const { results } = require('../../users.json');
+const { results } = require('../../../users.json');
 
 export const Download = () => {
   const download = (filename, text) => {
@@ -14,5 +14,9 @@ export const Download = () => {
 
     document.body.removeChild(element);
   };
-  return <button onClick={() => download('users.json', JSON.stringify(results))}>Download Config</button>;
+  return (
+    <div className="flex-center">
+      <button onClick={() => download('users.json', JSON.stringify(results))}>Download Config</button>
+    </div>
+  );
 };
