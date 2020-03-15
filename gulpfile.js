@@ -18,6 +18,10 @@ gulp.task('html', () => {
   return gulp.src('src/client/index.html').pipe(gulp.dest('dist/client/'));
 });
 
+gulp.task('flags', () => {
+  return gulp.src('node_modules/flag-icon-css/flags/**/*.svg').pipe(gulp.dest('dist/assets/flags'));
+});
+
 gulp.task('sass', () => {
   return gulp
     .src('src/client/assets/sass/*.scss')
@@ -48,8 +52,8 @@ gulp.task('dist:webpack:prod', done => {
   });
 });
 
-gulp.task('build', seq(['clean', 'sass', 'dist:assets:img', 'html', 'server'], 'dist:webpack:prod'));
-gulp.task('build:dev', seq(['clean', 'sass', 'dist:assets:img', 'html', 'server'], 'dist:webpack:dev'));
+gulp.task('build', seq(['clean', 'sass', 'html', 'flags', 'server']));
+gulp.task('build:dev', seq(['clean', 'sass', 'html', 'flags', 'server']));
 
 gulp.task('sass:watch', () => {
   gulp.watch('src/client/assets/sass/*.scss', ['sass']);

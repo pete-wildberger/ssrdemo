@@ -7,7 +7,10 @@ export const UserCard = props => {
       <div className="user-card flex-center">
         <Link to={`/details/${props.login.uuid}`} style={{ color: 'inherit', textDecoration: 'inherit' }}>
           <div className="profile-pic flex-center">
-            <img src={props.picture.large} alt={props.name.last} />
+            <div className="img-container">
+              <img src={props.picture.large} alt={props.name.last} />
+              <span className={`flag-icon flag-icon-${props.nat.toLowerCase()}`}></span>
+            </div>
           </div>
           <h2 className="name">
             {props.name.first} {props.name.last}

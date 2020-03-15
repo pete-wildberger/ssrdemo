@@ -3,28 +3,16 @@ import { Route, Switch } from 'react-router-dom';
 import axios from 'axios';
 import { Users } from './Users';
 import { UserDetail } from './UserDetail';
+const { results } = require('../../users.json');
 
 function FourOhFour(): JSX.Element {
   return <h1>Oh no 404</h1>;
 }
-
+// console.log(results);
 export class App extends React.Component {
   state = {
-    ghosts: new Array(12),
-    users: [],
-    loaded: false
+    users: results
   };
-
-  async componentDidMount() {
-    try {
-      const { data } = await axios.get('https://randomuser.me/api/?results=12');
-      const users = data.results;
-      console.log(users);
-      this.setState({ users, loaded: true });
-    } catch (e) {
-      console.log(e);
-    }
-  }
 
   render() {
     return (
@@ -33,7 +21,7 @@ export class App extends React.Component {
         <Route
           path="/details/:id"
           component={(props: { match }) => {
-            const selectedUser = this.state.users.find(user => props.match.params.id === user.login.uuid);
+            const selectedUser = this.state.users.find((user: any) => props.match.params.id === user.login.uuid);
             return <UserDetail {...selectedUser} />;
           }}
         />
