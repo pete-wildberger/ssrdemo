@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import axios from 'axios';
-import { Users } from './Users';
+import { Landing } from './Landing';
 import { UserDetail } from './UserDetail';
 const { results } = require('../../users.json');
 
@@ -17,7 +16,7 @@ export class App extends React.Component {
   render() {
     return (
       <Switch>
-        <Route exact path="/" component={() => <Users {...this.state} />} />
+        <Route exact path="/" component={() => <Landing {...this.state} />} />
         <Route
           path="/details/:id"
           component={(props: { match }) => {

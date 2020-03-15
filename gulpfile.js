@@ -52,8 +52,8 @@ gulp.task('dist:webpack:prod', done => {
   });
 });
 
-gulp.task('build', seq(['clean', 'sass', 'html', 'flags', 'server']));
-gulp.task('build:dev', seq(['clean', 'sass', 'html', 'flags', 'server']));
+gulp.task('build', seq(['clean', 'sass', 'html', 'flags', 'server'], 'dist:webpack:prod'));
+gulp.task('build:dev', seq(['clean', 'sass', 'html', 'flags', 'server'], 'dist:webpack:dev'));
 
 gulp.task('sass:watch', () => {
   gulp.watch('src/client/assets/sass/*.scss', ['sass']);

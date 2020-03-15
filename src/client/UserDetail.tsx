@@ -2,7 +2,7 @@ import * as React from 'react';
 
 export const UserDetail = props => {
   return (
-    <div>
+    <div onClick={e => console.log('hi')}>
       <img src={props.picture.large} alt={props.name.last} />
       <h2>
         {props.name.first} {props.name.last}
