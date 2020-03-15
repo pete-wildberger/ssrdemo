@@ -19,6 +19,7 @@ export class App extends React.Component {
     try {
       const { data } = await axios.get('https://randomuser.me/api/?results=12');
       const users = data.results;
+      console.log(users);
       this.setState({ users, loaded: true });
     } catch (e) {
       console.log(e);

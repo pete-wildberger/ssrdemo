@@ -1,10 +1,30 @@
 @import 'globals';
 
 .user {
-	.user-card {
-		flex-direction: column;
-		.profile-pic {
-
-		}
-	}
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #888888;
+  &:after {
+    content: '';
+    display: block;
+    padding-bottom: 100%;
+  }
+  .user-card {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    padding: 2%;
+    flex-direction: column;
+    .profile-pic {
+      img {
+        box-shadow: 0px 0px 10px #888888;
+        border-radius: 50%;
+        width: 100%;
+        max-width: 160px;
+        max-height: 160px;
+      }
+    }
+    .name {
+      text-align: center;
+    }
+  }
 }

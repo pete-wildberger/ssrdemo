@@ -3,7 +3,7 @@ import * as React from 'react';
 export const UserDetail = props => {
   return (
     <div>
-      <img src={props.picture.medium} alt="" />
+      <img src={props.picture.large} alt={props.name.last} />
       <h2>
         {props.name.first} {props.name.last}
       </h2>
