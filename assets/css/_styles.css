@@ -1,0 +1,41 @@
+@import 'globals';
+
+.user {
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #888888;
+}
+.user:after {
+  content: '';
+  display: block;
+  padding-bottom: 100%;
+}
+.user-card {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: 2%;
+  flex-direction: column;
+}
+.profile-pic .img-container {
+  position: relative;
+}
+img {
+  box-shadow: 0px 0px 10px #888888;
+  border-radius: 50%;
+  width: 100%;
+  max-width: 160px;
+  max-height: 160px;
+}
+span {
+  height: 24px;
+  width: 32px;
+  position: absolute;
+  z-index: 2;
+  bottom: -12px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+.name {
+  text-align: center;
+}
