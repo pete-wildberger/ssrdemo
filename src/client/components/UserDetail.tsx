@@ -12,7 +12,7 @@ export const UserDetail = (props) => {
           </h2>
           <p className="email">{props.email}</p>
           <p className="birthday">DOB: {format(new Date(props.dob.date), 'MM/dd/yyyy')}</p>
-          <p className="stree">
+          <p className="street">
             {props.location.street.number} {props.location.street.name}
           </p>
           <p className="city">
