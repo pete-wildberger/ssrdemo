@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
 
-export const UserCard = props => {
+export const UserCard = (props) => {
   return (
     <div className="col-3 user flex-center">
       <div className="user-card flex-center">
@@ -15,7 +15,7 @@ export const UserCard = props => {
           <h2 className="name">
             {props.name.first} {props.name.last}
           </h2>
-          <p>{props.dob.age}</p>
+          <p className="title">{props.job_title}</p>
         </Link>
       </div>
     </div>

@@ -3,6 +3,7 @@
     {
       "gender": "male",
       "name": { "title": "Mr", "first": "Vilhelm", "last": "Bakke" },
+      "job_title": "Senior Paradigm Synergist",
       "location": {
         "street": { "number": 2439, "name": "Gjerdrums vei" },
         "city": "Røn",
@@ -37,6 +38,7 @@
     {
       "gender": "male",
       "name": { "title": "Mr", "first": "Curtis", "last": "Perry" },
+      "job_title": "National Factors Facilitator",
       "location": {
         "street": { "number": 6884, "name": "Ormond Quay" },
         "city": "Portlaoise",
@@ -71,6 +73,7 @@
     {
       "gender": "male",
       "name": { "title": "Mr", "first": "Ray", "last": "Mason" },
+      "job_title": "Human Assurance Facilitator",
       "location": {
         "street": { "number": 949, "name": "W Sherman Dr" },
         "city": "Geraldton",
@@ -105,6 +108,7 @@
     {
       "gender": "female",
       "name": { "title": "Ms", "first": "Kim", "last": "Johnson" },
+      "job_title": "Chief Optimization Specialist",
       "location": {
         "street": { "number": 8114, "name": "King Street" },
         "city": "City of London",
@@ -139,6 +143,7 @@
     {
       "gender": "male",
       "name": { "title": "Mr", "first": "Adam", "last": "Møller" },
+      "job_title": "District Solutions Agent",
       "location": {
         "street": { "number": 3171, "name": "Enghaven" },
         "city": "Vesterborg",
@@ -173,6 +178,7 @@
     {
       "gender": "female",
       "name": { "title": "Mrs", "first": "Sofia", "last": "Thompson" },
+      "job_title": "Dynamic Response Representative",
       "location": {
         "street": { "number": 9775, "name": "North Street" },
         "city": "Greymouth",
@@ -207,6 +213,7 @@
     {
       "gender": "female",
       "name": { "title": "Miss", "first": "Aurora", "last": "Cortes" },
+      "job_title": "Product Group Manager",
       "location": {
         "street": { "number": 1547, "name": "Calle de Ferraz" },
         "city": "Barcelona",
@@ -241,6 +248,7 @@
     {
       "gender": "male",
       "name": { "title": "Mr", "first": "Bartolomeu", "last": "Alves" },
+      "job_title": "Lead Web Coordinator",
       "location": {
         "street": { "number": 8295, "name": "Avenida Vinícius de Morais" },
         "city": "Ji-Paraná",
@@ -275,6 +283,7 @@
     {
       "gender": "female",
       "name": { "title": "Miss", "first": "Aurora", "last": "Martinez" },
+      "job_title": "Dynamic Research Strategist",
       "location": {
         "street": { "number": 3623, "name": "Avenida del Planetario" },
         "city": "Elche",
@@ -309,6 +318,7 @@
     {
       "gender": "female",
       "name": { "title": "Mrs", "first": "Denise", "last": "George" },
+      "job_title": "Senior Group Administrator",
       "location": {
         "street": { "number": 2481, "name": "Shady Ln Dr" },
         "city": "Miami",
@@ -343,6 +353,7 @@
     {
       "gender": "female",
       "name": { "title": "Ms", "first": "Avery", "last": "Sanders" },
+      "job_title": "Central Factors Synergist",
       "location": {
         "street": { "number": 2528, "name": "Edwards Rd" },
         "city": "Elk Grove",
@@ -377,6 +388,7 @@
     {
       "gender": "male",
       "name": { "title": "Mr", "first": "Rafael", "last": "Rhodes" },
+      "job_title": "Customer Applications Developer",
       "location": {
         "street": { "number": 1537, "name": "Manor Road" },
         "city": "Glasgow",
@@ -411,6 +423,7 @@
     {
       "gender": "male",
       "name": { "title": "Mr", "first": "شایان", "last": "كامياران" },
+      "job_title": "Senior Markets Associate",
       "location": {
         "street": { "number": 5831, "name": "موسیوند" },
         "city": "قرچک",
@@ -445,6 +458,7 @@
     {
       "gender": "female",
       "name": { "title": "Miss", "first": "Lilja", "last": "Seppala" },
+      "job_title": "Regional Factors Technician",
       "location": {
         "street": { "number": 5149, "name": "Mannerheimintie" },
         "city": "Pello",
@@ -479,6 +493,7 @@
     {
       "gender": "male",
       "name": { "title": "Mr", "first": "Thomas", "last": "Coleman" },
+      "job_title": "Future Solutions Engineer",
       "location": {
         "street": { "number": 6712, "name": "The Crescent" },
         "city": "Cavan",
@@ -513,6 +528,7 @@
     {
       "gender": "male",
       "name": { "title": "Mr", "first": "Joshua", "last": "Lecomte" },
+      "job_title": "Future Solutions Engineer",
       "location": {
         "street": { "number": 5139, "name": "Rue Dugas-Montbel" },
         "city": "Nantes",
@@ -547,6 +563,7 @@
     {
       "gender": "female",
       "name": { "title": "Ms", "first": "Leta", "last": "Frazier" },
+      "job_title": "Regional Marketing Facilitator",
       "location": {
         "street": { "number": 1538, "name": "Hamilton Ave" },
         "city": "Reno",
@@ -581,6 +598,7 @@
     {
       "gender": "male",
       "name": { "title": "Mr", "first": "Joris", "last": "Hubert" },
+      "job_title": "Forward Branding Analyst",
       "location": {
         "street": { "number": 1740, "name": "Rue de L'Abbé-De-L'Épée" },
         "city": "Limoges",
@@ -615,6 +633,7 @@
     {
       "gender": "male",
       "name": { "title": "Mr", "first": "Tristan", "last": "Larsen" },
+      "job_title": "Senior Group Architect",
       "location": {
         "street": { "number": 189, "name": "Ådalen" },
         "city": "Samsø",
@@ -649,6 +668,7 @@
     {
       "gender": "male",
       "name": { "title": "Mr", "first": "Hans-Dietrich", "last": "Teuber" },
+      "job_title": "Direct Implementation Officer",
       "location": {
         "street": { "number": 2830, "name": "Raiffeisenstraße" },
         "city": "Amorbach",

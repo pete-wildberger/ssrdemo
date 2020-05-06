@@ -5,7 +5,7 @@ import * as fs from 'fs';
 import * as path from 'path';
 import * as React from 'react';
 import * as ReactDOMServer from 'react-dom/server';
-import { App } from '../src/App';
+import { App } from '../src/client/App';
 import { StaticRouter } from 'react-router-dom';
 import type { Request, Response } from 'express';
 const template = require('lodash.template');

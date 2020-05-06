@@ -10,7 +10,7 @@ function FourOhFour(): JSX.Element {
 // console.log(results);
 export class App extends React.Component {
   state = {
-    users: results
+    users: results,
   };
 
   render() {

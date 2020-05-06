@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { UserCard } from './UserCard';
 
-export const Users = props => {
+export const Users = ({ users }) => {
   return (
     <div className="row">
-      {props.users.map((u, i) => (
+      {users.map((u, i) => (
         <UserCard key={i} {...u} />
       ))}
     </div>
