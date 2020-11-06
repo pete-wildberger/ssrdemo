@@ -3,7 +3,7 @@ import { format } from 'date-fns';
 
 export const UserDetail = (props) => {
   return (
-    <div className="user-container">
+    <div className="user-container flex-center">
       <div className="user-content row" onClick={(e) => console.log('hi')}>
         <div className="col-6">
           <img src={props.picture.large} alt={props.name.last} />
