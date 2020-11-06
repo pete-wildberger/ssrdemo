@@ -7,52 +7,50 @@ import * as React from 'react';
 import * as ReactDOMServer from 'react-dom/server';
 import { App } from '../client/App';
 import { StaticRouter } from 'react-router-dom';
-import type { Request, Response, NextFunction } from 'express';
+import type { Request, Response } from 'express';
 const template = require('lodash.template');
 
 class Server {
-  private PORT: string;
-  private template: any;
-  private express = express();
+	private PORT: string;
+	private template: any;
+	private express = express();
 
-  constructor(port: string) {
-    const filePath = path.resolve(__dirname, '../client/index.html');
-    const baseTemplate = fs.readFileSync(filePath);
+	constructor(port: string) {
+		const filePath = path.resolve(__dirname, '../client/index.html');
+		const baseTemplate = fs.readFileSync(filePath);
 
-    this.template = template(baseTemplate);
-    this.PORT = port;
+		this.template = template(baseTemplate);
+		this.PORT = port;
 
-    this.middleware();
-    this.routes();
-    this.listen();
-  }
+		this.middleware();
+		this.routes();
+		this.listen();
+	}
 
-  middleware() {
-    this.express.use(compression());
-    this.express.use(helmet());
-    this.express.use(express.static('dist'));
-  }
+	middleware() {
+		this.express.use(compression());
+		this.express.use(helmet());
+		this.express.use(express.static('dist'));
+	}
 
-  routes() {
-    this.express.use((req: Request, res: Response) => {
-      const context: { [key: string]: any; url?: string } = {};
-      const body: string = ReactDOMServer.renderToString(
-        React.createElement(StaticRouter, { location: req.url, context }, React.createElement(App))
-      );
+	routes() {
+		this.express.use((req: Request, res: Response) => {
+			const context: { [key: string]: any; url?: string } = {};
+			const body: string = ReactDOMServer.renderToString(React.createElement(StaticRouter, { location: req.url, context }, React.createElement(App)));
 
-      if (context.url) {
-        res.redirect(context.url);
-      }
+			if (context.url) {
+				res.redirect(context.url);
+			}
 
-      res.send(this.template({ body }));
-    });
-  }
+			res.send(this.template({ body }));
+		});
+	}
 
-  listen() {
-    this.express.listen(this.PORT, () => {
-      console.log('Server listening on ' + this.PORT);
-    });
-  }
+	listen() {
+		this.express.listen(this.PORT, () => {
+			console.log('Server listening on ' + this.PORT);
+		});
+	}
 }
 
 const server = new Server(process.env.PORT || '3030');
